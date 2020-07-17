@@ -39,7 +39,7 @@ public class JsonPlaceHolderClientTest extends JsonPlaceHolderClient {
     public void givenMockingIsDoneByMockito_whenGetIsCalled_shouldReturnMockedObject() {
         JsonPlaceHolder jsonPlaceHolder = new JsonPlaceHolder();
         Mockito
-                .when(restTemplate.getForEntity(JSON_PLACEHOLDER_RESOURCE + "/1",
+                .when(restTemplate.getForEntity(RESOURCE_PATH + "/1",
                         JsonPlaceHolder.class, Long.toString(1)))
                 .thenReturn(new ResponseEntity<JsonPlaceHolder>(jsonPlaceHolder, HttpStatus.OK));
 
